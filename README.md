@@ -30,8 +30,6 @@ require 'miyabi'
 "ヒラガナ".to_hira #=> "ひらがな"
 # katakana(hiragana) to romaji
 "ローマ".to_roman #=> "roma"
-# kanji to hiragana
-"今日は良い天気ですね".to_kanhira #=> "きょうはいいてんきですね
 
 "ひらがな".is_hira? #=> true
 
