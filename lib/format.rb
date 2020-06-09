@@ -1,10 +1,6 @@
 require 'mechanize'
-class String
-  def to_kanhira
-    agent = Mechanize.new
-    agent.get("https://yomikatawa.com/kanji/#{self}").search('#content p').first.inner_text
-  end
 
+class String
   def to_kana
     self.tr('ぁ-ん','ァ-ン')
   end
