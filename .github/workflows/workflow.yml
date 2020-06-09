@@ -1,4 +1,4 @@
-name: build-test
+name: miyabi-test
 on: push
 jobs:
   build:

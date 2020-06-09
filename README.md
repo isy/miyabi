@@ -1,4 +1,5 @@
-# Miyabi
+
+# Miyabi ![](https://github.com/LinQTeam/miyabi/workflows/miyabi-test/badge.svg)
 
 Welcome to Miyabi!
 Miyabi is Romaji-Kana transliterator.
