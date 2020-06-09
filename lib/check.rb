@@ -1,6 +1,6 @@
 class String
   def is_hira?
-    return true if self =~ /\p{hiragana}/
+    return true if self =~ /\p{hiragana}|\p{hiragana}[0-9][０-９]/
     false
   end
 
@@ -10,7 +10,7 @@ class String
   end
 
   def is_kana?
-    return true if self =~ /\p{katakana}/
+    return true if self =~ /\p{katakana}|\p{katakana}[0-9][０-９]/
     false
   end
 
@@ -20,7 +20,7 @@ class String
   end
 
   def is_roman?
-    return true if self =~ /^[a-zA-Z]+$/
+    return true if self =~ /^[a-zA-Z0-9]+$/
     false
   end
 end

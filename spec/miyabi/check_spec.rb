@@ -10,8 +10,26 @@ RSpec.describe "check" do
       it { is_expected.to be_truthy }
     end
 
+    context "when hiragana with number" do
+      let(:text) { "ひらがな01234" }
+
+      it { is_expected.to be_truthy }
+    end
+
+    context "when hiragana with em number" do
+      let(:text) { "ひらがな０１２３４" }
+
+      it { is_expected.to be_truthy }
+    end
+
     context "when romaji" do
       let(:text) { "hiragana" }
+
+      it { is_expected.to be_falsey }
+    end
+
+    context "when romaji with number" do
+      let(:text) { "hiragana01234" }
 
       it { is_expected.to be_falsey }
     end
@@ -60,6 +78,30 @@ RSpec.describe "check" do
       let(:text) { "katakana" }
 
       it { is_expected.to be_falsey }
+    end
+
+    context "when number" do
+      let(:text) { "0123" }
+
+      it { is_expected.to be_falsey }
+    end
+
+    context "when katakana with number" do
+      let(:text) { "カキクケコ0123" }
+
+      it { is_expected.to be_truthy }
+    end
+
+    context "when number" do
+      let(:text) { "０１２３４" }
+
+      it { is_expected.to be_falsey }
+    end
+
+    context "when katakana with em number" do
+      let(:text) { "カキクケコ０１２３４" }
+
+      it { is_expected.to be_truthy }
     end
 
     context "when includes katakana" do
@@ -131,6 +173,12 @@ RSpec.describe "check" do
     let(:text) { "romaji" }
 
     context "when romaji" do
+      it { is_expected.to be_truthy }
+    end
+
+    context "when includes number" do
+      let(:text) { "romaji0123" }
+
       it { is_expected.to be_truthy }
     end
 

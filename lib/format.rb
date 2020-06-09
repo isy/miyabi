@@ -1,5 +1,3 @@
-require 'mechanize'
-
 class String
   def to_kana
     self.tr('ぁ-ん','ァ-ン')
@@ -10,6 +8,8 @@ class String
   end
 
   def to_roman
+    binding.pry
+    return self if self.is_roman?
     s = self.to_kana
     s.gsub(/[#{s}]/, kana_roman)
   end
@@ -135,6 +135,26 @@ class String
       'フィ' => 'fi',
       'フェ' => 'fe',
       'フォ' => 'fo',
+      '0' => '0',
+      '1' => '1',
+      '2' => '2',
+      '3' => '3',
+      '4' => '4',
+      '5' => '5',
+      '6' => '6',
+      '7' => '7',
+      '8' => '8',
+      '9' => '9',
+      '０' => '0',
+      '１' => '1',
+      '２' => '2',
+      '３' => '3',
+      '４' => '4',
+      '５' => '5',
+      '６' => '6',
+      '７' => '7',
+      '８' => '8',
+      '９' => '9'
     }
   end
 
