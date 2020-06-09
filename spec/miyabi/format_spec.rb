@@ -72,10 +72,40 @@ RSpec.describe "format" do
       it { is_expected.to eq "hiragana" }
     end
 
+    context "when romaji with number" do
+      let(:text) { "romaji01234" }
+
+      it { is_expected.to eq text }
+    end
+
+    context "when hiragana with half size number" do
+      let(:text) { "ひらがな01234" }
+
+      it { is_expected.to eq "hiragana01234" }
+    end
+
+    context "when hiragana with em number" do
+      let(:text) { "ひらがな０１２３４" }
+
+      it { is_expected.to eq "hiragana01234" }
+    end
+
     context "when katakana" do
       let(:text) { "カタカナ" }
 
       it { is_expected.to eq "katakana" }
+    end
+
+    context "when katakana with number" do
+      let(:text) { "カタカナ01234" }
+
+      it { is_expected.to eq "katakana01234" }
+    end
+
+    context "when katakana with em number" do
+      let(:text) { "カタカナ０１２３４" }
+
+      it { is_expected.to eq "katakana01234" }
     end
 
     context "when hiragana with katakana" do
