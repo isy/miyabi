@@ -96,6 +96,18 @@ RSpec.describe "format" do
       it { is_expected.to eq "katakana" }
     end
 
+    context "when katakana with number" do
+      let(:text) { "カタカナ01234" }
+
+      it { is_expected.to eq "katakana01234" }
+    end
+
+    context "when katakana with em number" do
+      let(:text) { "カタカナ０１２３４" }
+
+      it { is_expected.to eq "katakana01234" }
+    end
+
     context "when hiragana with katakana" do
       let(:text) { "ひらがなカタカナ" }
 

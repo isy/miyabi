@@ -8,7 +8,6 @@ class String
   end
 
   def to_roman
-    binding.pry
     return self if self.is_roman?
     s = self.to_kana
     s.gsub(/[#{s}]/, kana_roman)

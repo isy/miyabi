@@ -1,6 +1,5 @@
 require "bundler/setup"
 require "miyabi"
-require "pry"
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure
