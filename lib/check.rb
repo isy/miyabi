@@ -20,7 +20,7 @@ class String
   end
 
   def is_roman?
-    return true if self =~ /^[a-zA-Z0-9]+$/
+    return true if self =~ /^[a-zA-Z0-9０-９]+$/
     false
   end
 end

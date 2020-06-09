@@ -182,6 +182,12 @@ RSpec.describe "check" do
       it { is_expected.to be_truthy }
     end
 
+    context "when includes number" do
+      let(:text) { "romaji１２３４" }
+
+      it { is_expected.to be_truthy }
+    end
+
     context "when hiragana" do
       let(:text) { "ひらがな" }
 
