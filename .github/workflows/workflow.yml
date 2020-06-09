@@ -11,4 +11,6 @@ jobs:
       - name: bundle install
         run: |
           gem install bundler -v 2.0.2
-          bundle exec rspec spec/
+          bundle install
+      - name: run test
+        run: bundle exec rspec spec/
