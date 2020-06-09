@@ -1,0 +1,14 @@
+name: build-test
+on: push
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-ruby@v1
+        with:
+          ruby-version: 2.6
+      - name: bundle install
+        run: |
+          gem install bundler -v 2.0.2
+          bundle exec rspec spec/
