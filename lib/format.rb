@@ -2,7 +2,7 @@ require 'mechanize'
 class String
   def to_kanhira
     agent = Mechanize.new
-    agent.get("https://yomikatawa.com/kanji/#{self}").search('#content p').first.inner_text
+    agent.get("https://yomikatawa.com/kanji/#{self}").search('#yomikata tbody tr td').first.inner_text
   end
 
   def to_kana
