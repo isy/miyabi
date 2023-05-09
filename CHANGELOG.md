@@ -9,6 +9,14 @@ The format is based on [Keep a Changelog][cl], and this project adheres to [Sema
 
 ## [Unreleased]
 
-### Added
+## [0.1.2]
 
-* This changelog file
+Trivial changes:
+
+* Added this changelog file.
+
+### Fixed
+
+* `String#to_kanhira` method according to the referring web page.
+* Update dependencies.
+  Remove default/bundled gems and update the version of the required gems.
