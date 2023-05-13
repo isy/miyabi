@@ -14,6 +14,7 @@ The format is based on [Keep a Changelog][cl], and this project adheres to [Sema
 Trivial changes:
 
 * Added this changelog file.
+* Lint Ruby sources with RuboCop.
 
 ### Fixed
 
