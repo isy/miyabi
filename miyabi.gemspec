@@ -22,5 +22,6 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
 
   spec.add_development_dependency "rspec", "~> 3.12"
+  spec.add_development_dependency "rubocop", "~> 1.50"
   spec.add_dependency "mechanize", "~> 2.9"
 end
