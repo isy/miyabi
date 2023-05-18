@@ -1,6 +1,6 @@
-require "miyabi/version"
-require "format"
-require "check"
+require_relative "miyabi/version"
+require_relative "format"
+require_relative "check"
 
 module Miyabi
 end
