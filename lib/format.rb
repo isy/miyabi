@@ -6,19 +6,20 @@ class String
   end
 
   def to_kana
-    self.tr('ぁ-ん','ァ-ン')
+    tr('ぁ-ん', 'ァ-ン')
   end
 
   def to_hira
-    self.tr('ァ-ン','ぁ-ん')
+    tr('ァ-ン', 'ぁ-ん')
   end
 
   def to_roman
-    s = self.to_kana
+    s = to_kana
     s.gsub(/[#{s}]/, kana_roman)
   end
 
   private
+
   def kana_roman
     {
       'ア' => 'a',
@@ -138,8 +139,7 @@ class String
       'ファ' => 'fa',
       'フィ' => 'fi',
       'フェ' => 'fe',
-      'フォ' => 'fo',
+      'フォ' => 'fo'
     }
   end
-
 end
