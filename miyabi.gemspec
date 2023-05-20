@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
 
   spec.summary       = 'kana,hira,kanji formatter'
   spec.description   = 'Format Japanese characters'
-  spec.homepage      = ''
+  spec.homepage      = 'https://github.com/isy/miyabi'
   spec.license       = 'MIT'
   spec.metadata['rubygems_mfa_required'] = 'true'
 
