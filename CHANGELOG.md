@@ -9,6 +9,8 @@ The format is based on [Keep a Changelog][cl], and this project adheres to [Sema
 
 ## [Unreleased]
 
+## [0.2.0]
+
 Trivial changes:
 
 * Use net/http and Nokogiri instead of Mechanize.
