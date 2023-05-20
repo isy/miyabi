@@ -13,6 +13,10 @@ Trivial changes:
 
 * Use net/http and Nokogiri instead of Mechanize.
 
+### Added
+
+* modules to provide instance methods for `String`: `Miyabi::CheckString` and `Miyabi::FormatString`
+
 ## [0.1.2]
 
 Trivial changes:
