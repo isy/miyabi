@@ -9,6 +9,12 @@ The format is based on [Keep a Changelog][cl], and this project adheres to [Sema
 
 ## [Unreleased]
 
+### Fixed
+
+* `Miyabi::FormatString#to_roman`
+  * to properly handle two chars conversions.
+  * add 'ー' to '-' conversion.
+
 ## [0.2.0]
 
 Trivial changes:

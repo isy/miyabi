@@ -20,13 +20,59 @@ module Miyabi
     end
 
     def to_roman
-      s = self.to_kana
-      s.gsub(/[#{s}]/, kana_roman)
+      s = to_kana
+      KATAKANA_TO_ROMAN_MAPPING.each do |kana, roman|
+        s.gsub!(kana, roman)
+      end
+      s
     end
 
-    private
-    def kana_roman
+    KATAKANA_TO_ROMAN_MAPPING =
       {
+        'キャ' => 'kya',
+        'キュ' => 'kyu',
+        'キョ' => 'kyo',
+        'シャ' => 'sha',
+        'シュ' => 'shu',
+        'ショ' => 'sho',
+        'チャ' => 'cha',
+        'チュ' => 'chu',
+        'チョ' => 'cho',
+        'ヂャ' => 'ja',
+        'ヂュ' => 'ju',
+        'ヂョ' => 'jo',
+        'ニャ' => 'nya',
+        'ニュ' => 'nyu',
+        'ニョ' => 'nyo',
+        'ヒャ' => 'hya',
+        'ヒュ' => 'hyu',
+        'ヒョ' => 'hyo',
+        'ミャ' => 'mya',
+        'ミュ' => 'myu',
+        'ミョ' => 'myo',
+        'リャ' => 'rya',
+        'リュ' => 'ryu',
+        'リョ' => 'ryo',
+        'ギャ' => 'gya',
+        'ギュ' => 'gyu',
+        'ギョ' => 'gyo',
+        'ジャ' => 'ja',
+        'ジュ' => 'ju',
+        'ジョ' => 'jo',
+        'ビャ' => 'bya',
+        'ビュ' => 'byu',
+        'ビョ' => 'byo',
+        'ピャ' => 'pya',
+        'ピュ' => 'pyu',
+        'ピョ' => 'pyo',
+        'ヴァ' => 'va',
+        'ヴィ' => 'vi',
+        'ヴェ' => 've',
+        'ヴォ' => 'vo',
+        'ファ' => 'fa',
+        'フィ' => 'fi',
+        'フェ' => 'fe',
+        'フォ' => 'fo',
         'ア' => 'a',
         'イ' => 'i',
         'ウ' => 'u',
@@ -100,52 +146,10 @@ module Miyabi
         'プ' => 'pu',
         'ペ' => 'pe',
         'ポ' => 'po',
-        'キャ' => 'kya',
-        'キュ' => 'kyu',
-        'キョ' => 'kyo',
-        'シャ' => 'sha',
-        'シュ' => 'shu',
-        'ショ' => 'sho',
-        'チャ' => 'cha',
-        'チュ' => 'chu',
-        'チョ' => 'cho',
-        'ヂャ' => 'ja',
-        'ヂュ' => 'ju',
-        'ヂョ' => 'jo',
-        'ニャ' => 'nya',
-        'ニュ' => 'nyu',
-        'ニョ' => 'nyo',
-        'ヒャ' => 'hya',
-        'ヒュ' => 'hyu',
-        'ヒョ' => 'hyo',
-        'ミャ' => 'mya',
-        'ミュ' => 'myu',
-        'ミョ' => 'myo',
-        'リャ' => 'rya',
-        'リュ' => 'ryu',
-        'リョ' => 'ryo',
-        'ギャ' => 'gya',
-        'ギュ' => 'gyu',
-        'ギョ' => 'gyo',
-        'ジャ' => 'ja',
-        'ジュ' => 'ju',
-        'ジョ' => 'jo',
-        'ビャ' => 'bya',
-        'ビュ' => 'byu',
-        'ビョ' => 'byo',
-        'ピャ' => 'pya',
-        'ピュ' => 'pyu',
-        'ピョ' => 'pyo',
-        'ヴァ' => 'va',
-        'ヴィ' => 'vi',
         'ヴ' => 'vu',
-        'ヴェ' => 've',
-        'ヴォ' => 'vo',
-        'ファ' => 'fa',
-        'フィ' => 'fi',
-        'フェ' => 'fe',
-        'フォ' => 'fo',
+        'ー' => '-',
       }
-    end
+
+    private_constant :KATAKANA_TO_ROMAN_MAPPING
   end
 end
