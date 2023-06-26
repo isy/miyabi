@@ -9,6 +9,8 @@ The format is based on [Keep a Changelog][cl], and this project adheres to [Sema
 
 ## [Unreleased]
 
+## [0.3.0]
+
 ### Added
 
 * method aliases: `hiragana?`, `hira?`, `japanese?`, `katakana?`, `kanji?`, `roman?`, `to_katakana?`, and `to_hiragana`.
