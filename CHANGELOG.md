@@ -9,6 +9,10 @@ The format is based on [Keep a Changelog][cl], and this project adheres to [Sema
 
 ## [Unreleased]
 
+### Others
+
+* Add GNU Guix support.
+
 ## [0.2.1]
 
 ### Fixed
