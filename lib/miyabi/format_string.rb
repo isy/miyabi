@@ -15,9 +15,13 @@ module Miyabi
       self.tr('ぁ-ん','ァ-ン')
     end
 
+    alias to_katakana to_kana
+
     def to_hira
       self.tr('ァ-ン','ぁ-ん')
     end
+
+    alias to_hiragana to_hira
 
     def to_roman
       s = to_kana
