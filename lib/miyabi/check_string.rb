@@ -1,40 +1,39 @@
 module Miyabi
   module CheckString
-    def is_hira?
+    def hiragana?
       return true if self =~ /\p{hiragana}/
       false
     end
 
-    alias hiragana? is_hira?
-    alias hira? is_hira?
+    alias is_hira? hiragana?
+    alias hira? hiragana?
 
-    def is_japanese?
+    def japanese?
       return true if self =~ /\A(?:\p{Hiragana}|\p{Katakana}|[ー－]|[一-龠々])+\z/
       false
     end
 
-    alias japanese? is_japanese?
+    alias is_japanese? japanese?
 
-    def is_kana?
+    def katakana?
       return true if self =~ /\p{katakana}/
       false
     end
 
-    alias katakana? is_kana?
-    # alias kana? is_kana?
+    alias is_kana? katakana?
 
-    def is_kanji?
+    def kanji?
       return true if self =~ /^[一-龥]+$/
       false
     end
 
-    alias kanji? is_kanji?
+    alias is_kanji? kanji?
 
-    def is_roman?
+    def roman?
       return true if self =~ /^[a-zA-Z]+$/
       false
     end
 
-    alias roman? is_roman?
+    alias is_roman? roman?
   end
 end

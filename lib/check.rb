@@ -1,4 +1,4 @@
-require_relative "miyabi/check_string"
+require_relative 'miyabi/check_string'
 
 class String
   include ::Miyabi::CheckString

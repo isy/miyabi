@@ -12,13 +12,13 @@ module Miyabi
     end
 
     def to_kana
-      self.tr('ぁ-ん','ァ-ン')
+      tr('ぁ-ん', 'ァ-ン')
     end
 
     alias to_katakana to_kana
 
     def to_hira
-      self.tr('ァ-ン','ぁ-ん')
+      tr('ァ-ン', 'ぁ-ん')
     end
 
     alias to_hiragana to_hira
@@ -151,7 +151,7 @@ module Miyabi
         'ペ' => 'pe',
         'ポ' => 'po',
         'ヴ' => 'vu',
-        'ー' => '-',
+        'ー' => '-'
       }
 
     private_constant :KATAKANA_TO_ROMAN_MAPPING
