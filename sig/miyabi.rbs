@@ -1,0 +1,36 @@
+# TypeProf 0.21.3
+
+# Classes
+class String
+  include Miyabi::FormatString
+  include Miyabi::CheckString
+end
+
+module Miyabi
+  VERSION: String
+
+  module CheckString
+    def hiragana?: -> bool
+    alias is_hira? hiragana?
+    alias hira? hiragana?
+    def japanese?: -> bool
+    alias is_japanese? japanese?
+    def katakana?: -> bool
+    alias is_kana? katakana?
+    def kanji?: -> bool
+    alias is_kanji? kanji?
+    def roman?: -> bool
+    alias is_roman? roman?
+  end
+
+  module FormatString
+    KATAKANA_TO_ROMAN_MAPPING: Hash[String, String]
+
+    def to_kanhira: -> String
+    def to_kana: -> String
+    alias to_katakana to_kana
+    def to_hira: -> String
+    alias to_hiragana to_hira
+    def to_roman: -> String
+  end
+end
