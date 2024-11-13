@@ -9,6 +9,13 @@ The format is based on [Keep a Changelog][cl], and this project adheres to [Sema
 
 ## [Unreleased]
 
+## 0.3.1
+
+This is a maintenance release.
+
+* Lint source codes.
+* Add RBS file.
+
 ## [0.3.0]
 
 ### Added
