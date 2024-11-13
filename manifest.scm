@@ -8,4 +8,4 @@
     (cons* #:ruby ruby-3.2
            (package-arguments ruby-nokogiri)))))
 
-(packages->manifest (list ruby-nokogiri' ruby-rspec ruby-3.2))
+(packages->manifest (list ruby-nokogiri' ruby-rspec ruby-3.2 ruby-rubocop))
